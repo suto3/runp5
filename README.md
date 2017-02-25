@@ -1,1 +1,1 @@
-# excute enviroment p5.js
+# running enviroment p5.js
