@@ -32,9 +32,9 @@
                 projectURL += projectDirs[i] 
               }
             
-              link = $('<p><a>link to project</a></p>')
+              link = $('<a>link to project</a>')
               link.attr('href',projectURL)
-              $('body').append(link)
+              $('body').append($('<p>').append(link))
             
             //}
           }
