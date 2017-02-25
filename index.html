@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Run p5.js</title>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+
+    <script>
+      $(function(){
+        args = {} // p5.html?arg1=abc&arg2=def
+        document.location.search.substring(1).split('&').map((s) => {
+          [name,value] = s.split('=')
+          args[name] = decodeURIComponent(value)
+        })
+        codelist = args['code']
+        if(codelist){
+          codes = codelist.split(/,/)
+          for(i=0;i<codes.length;i++){
+            code = codes[i]
+            /*
+            if(code.match(/^https:\/\/scrapbox.io\/api\/code\/prog-exercises/i) ||
+               code.match(/^https:\/\/scrapbox.io\/api\/code\/Nota/i) ||
+               code.match(/^https:\/\/scrapbox.io\/api\/code\/masuilab/i)){
+            */
+              script=$('<script>')
+              script.attr('src',code)
+              $('body').append(script)
+            //}
+          }
+        }
+      })
+      </script>
+  </head>
+  <body>
+  </body>
+</html>
