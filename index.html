@@ -7,8 +7,7 @@
 
     <script>
       $(function(){
-        console.log("loaded");
-        args = {} // p5.html?arg1=abc&arg2=def
+        args = {}
         document.location.search.substring(1).split('&').map((s) => {
           [name,value] = s.split('=')
           args[name] = decodeURIComponent(value)
@@ -18,7 +17,6 @@
           codes = codelist.split(/,/)
           for(i=0;i<codes.length;i++){
             code = codes[i]
-            console.log(code);
             /* if you want to allow access from the spesific project ( ex. "aaa" or "bbb" or "ccc"),
             if(code.match(/^https:\/\/scrapbox.io\/api\/code\/aaa) ||
                code.match(/^https:\/\/scrapbox.io\/api\/code\/bbb) ||
