@@ -25,7 +25,7 @@
               script=$('<script>')
               script.attr('src',code)
               $('body').append(script)
-              projectPath = code.split(/code/)[1];
+              projectPath = code.split(/code/)[1].split("/");
               originpage = $('<script>')
             //}
           }
