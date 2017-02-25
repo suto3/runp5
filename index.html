@@ -19,10 +19,10 @@
           for(i=0;i<codes.length;i++){
             code = codes[i]
             console.log(code);
-            /*
-            if(code.match(/^https:\/\/scrapbox.io\/api\/code\/prog-exercises/i) ||
-               code.match(/^https:\/\/scrapbox.io\/api\/code\/Nota/i) ||
-               code.match(/^https:\/\/scrapbox.io\/api\/code\/masuilab/i)){
+            /* if you want to allow access from the spesific project ( ex. "aaa" or "bbb" or "ccc"),
+            if(code.match(/^https:\/\/scrapbox.io\/api\/code\/aaa) ||
+               code.match(/^https:\/\/scrapbox.io\/api\/code\/bbb) ||
+               code.match(/^https:\/\/scrapbox.io\/api\/code\/ccc)){
             */
               script=$('<script>')
               script.attr('src',code)
