@@ -25,8 +25,17 @@
               script=$('<script>')
               script.attr('src',code)
               $('body').append(script)
-              projectPath = code.split(/code/)[1].split("/");
-              originpage = $('<script>')
+            
+              projectDirs = code.split('/code/')[1].split('/')
+              projectURL = 'https://scrapbox.io/'
+              for(i=0; i<projectPaths.length-1 ;i++; ){
+                projectURL += projectDirs[i] 
+              }
+            
+              link = $('<a>')
+              link.attr('href',projectURL)
+              $('body').applend($('<p>')).append(link).append('link to project')
+            
             //}
           }
         }
