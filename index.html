@@ -29,12 +29,12 @@
               projectDirs = code.split('/code/')[1].split('/')
               projectURL = 'https://scrapbox.io/'
               for(i=0; i<projectDirs.length-1 ;i++ ){
-                projectURL += projectDirs[i] 
+                projectURL += '/'+projectDirs[i] 
               }
             
               link = $('<a>link to project</a>')
               link.attr('href',projectURL)
-              $('body').append($('<p>').append(link))
+              $('#link').append(link)
             
             //}
           }
@@ -43,5 +43,6 @@
       </script>
   </head>
   <body>
+  <p id="link"></p>
   </body>
 </html>
