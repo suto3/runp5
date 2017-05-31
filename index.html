@@ -25,7 +25,8 @@
           [name,value] = s.split('=')
           args[name] = decodeURIComponent(value)
         })
-        codelist = args['code']
+      codelist = args['code']
+      alert(codelist)
         if(codelist){
           codes = codelist.split(/,/)
           for(i=0;i<codes.length;i++){
