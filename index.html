@@ -29,7 +29,8 @@
         if(codelist){
           codes = codelist.split(/,/)
           for(i=0;i<codes.length;i++){
-            code = codes[i]
+		      code = codes[i]
+		      alert(code)
             script=$('<script>')
             script.attr('src',code)
             $('body').append(script)
