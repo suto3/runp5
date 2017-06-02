@@ -15,7 +15,7 @@ async function loadAllScripts (urls) {
 
 $(function(){
   const args = {}
-  document.location.search.substring(1).split('&').map((s) => {
+  document.location.search.substring(1).split('&').forEach((s) => {
     let [name, value] = s.split('=')
     args[name] = decodeURIComponent(value)
   })
