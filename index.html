@@ -17,38 +17,7 @@
 
     <script src="//linda-server.herokuapp.com/socket.io/socket.io.js"></script>
     <script src="//linda-server.herokuapp.com/linda/linda.js"></script>
-
-    <script>
-      $(function(){
-        args = {}
-        document.location.search.substring(1).split('&').map((s) => {
-          [name,value] = s.split('=')
-          args[name] = decodeURIComponent(value)
-        })
-      codelist = args['code']
-        // alert(codelist)
-        if(codelist){
-          codes = codelist.split(/,/)
-          for(i=0;i<codes.length;i++){
-	    code = codes[i]
-	    //alert(code)
-            script=$('<script>')
-            script.attr('src',code)
-            $('body').append(script)
-            
-            //projectDirs = code.split('/code/')[1].split('/')
-            //projectURL = 'https://scrapbox.io'
-            //for(i=0; i<projectDirs.length-1 ;i++ ){
-            //  projectURL += '/'+projectDirs[i] 
-            //}
-            
-            //link = $('<a>[source]</a>')
-            //link.attr('href',projectURL)
-            //$('#link').append(link)
-          }
-        }
-      })
-      </script>
+    <script src="./index.js"></script>
   </head>
   <body>
   <!-- <p id="link"></p> -->
