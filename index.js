@@ -49,6 +49,7 @@ $(function(){
 	args[name] = decodeURIComponent(value)
     })
     const codelist = args['code']
+    const csslist = args['css']
     const p = args['p']
     const clist = args['c']
     const slist = args['s']
@@ -58,6 +59,10 @@ $(function(){
     if (codelist) {
 	let urls = codelist.split(/,/)
 	loadAllScripts(urls)
+    }
+    if (csslist) {
+	let urls = csslist.split(/,/)
+	loadAllStyles(urls)
     }
     if (p) {
 	project = p
